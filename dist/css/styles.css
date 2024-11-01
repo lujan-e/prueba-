@@ -305,7 +305,7 @@ figure {
 
 img,
 svg {
-  vertical-align: middle;
+   vertical-align: middle;
 }
 
 table {
@@ -598,8 +598,11 @@ progress {
 }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+
+  width: 150px; /* Ajusta el tamaño a tu preferencia */
+  height: 150px;
+  border-radius: 50%; /* Esto hace que la imagen sea redonda */
+  object-fit: cover;
 }
 
 .img-thumbnail {
@@ -609,6 +612,7 @@ progress {
   border-radius: 0.375rem;
   max-width: 100%;
   height: auto;
+
 }
 
 .figure {
@@ -618,6 +622,10 @@ progress {
 .figure-img {
   margin-bottom: 0.5rem;
   line-height: 1;
+  width: 150px; /* Ajusta el tamaño a tu preferencia */
+  height: 150px;
+  border-radius: 50%; /* Esto hace que la imagen sea redonda */
+  object-fit: cover;
 }
 
 .figure-caption {
@@ -2803,6 +2811,8 @@ textarea.form-control-lg {
 @media (prefers-reduced-motion: reduce) {
   .btn {
     transition: none;
+       
+
   }
 }
 .btn:hover {
@@ -2858,7 +2868,50 @@ textarea.form-control-lg {
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #1D809F;
   --bs-btn-disabled-border-color: #1D809F;
+  /* Estilo personalizado para el botón */
+  background-color: #007bff;
+  color: rgb(245, 255, 254);
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  background-color: #007bff; /* Color del fondo */
+      
+    
+  color: white; /* Color del texto */
+      border: none;
+  padding: 12px 24px;
+  border-radius: 30px; /* Bordes redondeados */
+      
+     
+  font-weight: bold;
+
+  
+   
+  text-transform: uppercase;
+  
+      
+  transition: background-color 0.3s, transform 0.3s;
+  }
+  
+
+
+.btn-custom:hover {
+    background-color: #0056b3; /* Color al pasar el cursor */
+    transform: scale(1.05); /* Efecto de crecimiento suave */
 }
+
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Bordes redondeados para los campos de entrada */
+.form-control {
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
 
 .btn-secondary {
   --bs-btn-color: #000;
@@ -3135,6 +3188,15 @@ textarea.form-control-lg {
 }
 .btn-link:hover {
   color: var(--bs-btn-hover-color);
+  background-color: #007bff; /* Color del fondo */
+  color: white; /* Color del texto */
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px; /* Bordes redondeados */
+  font-weight: bold;
+  text-transform: uppercase;
+
+
 }
 
 .btn-lg, .btn-group-lg > .btn {
